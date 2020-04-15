@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, {useState, useEffect} from 'react'
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import FadeIn from 'react-fade-in';
 import '../components/MovieGet.css'
-import '../components/MovieCard'
 import MovieCard from '../components/MovieCard';
-
+import MovieTab from './MovieTab'
+import Header from './Header.js'
 
 
 
@@ -26,34 +26,31 @@ axios.get('https://api.themoviedb.org/3/movie/now_playing?api_key=88dc4a5c068485
 }, [])
 
 
-
-
 return(
   
-
+<div className="mainOne">
   <div className="nextTry">
+    
     {movieInfo.map((mov, index)=>( 
     ////////////////////////////////
-    <section key = {index} className="movieContainer" id="movieContainer">
-      <ul>
-        <li>
-        
-          <figure>
-            <img src = {`https://image.tmdb.org/t/p/original${mov.poster_path}`} className= 'posterImage' alt='Movie Poster '/>
-            <button key= {mov.title} className="overlay" >
-              <div className="text">{mov.title}</div>
-            </button>
-          </figure>
-        </li>
-      </ul>           
-
-      <MovieCard className='movieCard' key= {mov.title}   item={`${mov.title}`}/>
-       
-      </section>
-    ////////////////////////////////
-    ))}
+    <section key= {Math.random()}  >
     
-  </div>
+    <FadeIn>
+      <MovieCard className='movieCard' 
+      backdrop={`https://image.tmdb.org/t/p/original${mov.backdrop_path}`}
+      movie={`${mov.title}`}
+      image={`https://image.tmdb.org/t/p/original${mov.poster_path}`}
+      synopsis={mov.overview}
+      />
+      </FadeIn>
+      <p></p>
+    </section>
+
+
+    ////////////////////////////////  
+    ))}
+
+  </div></div>
 )
 }
 export default MovieGet
