@@ -5,14 +5,11 @@
 /* Generic styles */
 html {
   scroll-behavior: smooth;
-  background-image: linear-gradient(to bottom,#838383,#353535,#000000db 100%);
+  /*background-image: linear-gradient(to bottom,rgb(233, 77, 77),#000000db 100%);*/
   background-size: cover;
-  
+  background-color: 	rgb(59, 137, 119)
 }
 
-*{
-  max-width: 100%;
-}
 
 .nextTry{
   display:flex;
@@ -21,9 +18,7 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
 
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-top: 3%;
+
   margin-bottom:3%;
 }
 
@@ -33,3 +28,10 @@ button{
 }
 
 
+.w{
+  color: rgb(223, 173, 114),
+  rgb(27, 127, 129), 	rgb(233, 77, 77),
+  rgb(27, 32, 47), rgb(255, 35, 96),
+  rgb(88, 255, 212),	rgb(57, 78, 255)
+
+}

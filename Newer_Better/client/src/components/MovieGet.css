@@ -1,25 +1,24 @@
 
 
 .movieContainer:hover ul{
-    filter:blur(1px);
-    opacity:1;
-    transform: scale(.95);
+    transform: scale(.99);
     transition: all .2s;
   }
 
 .movieContainer  ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(227px, 0px));
+    
 
 }
 
 .movieContainer > ul > li {
-    border-radius: .5rem;
     list-style-type:none;
+    margin: 0%
 }
 
 .movieContainer > ul > li > figure {
-    max-height: 300px;
+    max-height: 202px;
     overflow: hidden;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
@@ -27,7 +26,7 @@
     border-bottom-right-radius: .5rem;
     position: relative;
     padding-bottom: 8%;
-    box-shadow: 0 0 15px #000000;
+     /*box-shadow: 0 0 10px #000000;*/
 }
 
 .movieContainer > ul > li > figure > img {
@@ -43,9 +42,10 @@
 }
 
 
+  .movieContainer:hover ul li img{
+    filter: grayscale(1);
 
-
-
+  }
 
 
 
@@ -64,10 +64,7 @@
     background-color: rgba(63, 63, 63, 0.714);
   }
   
-  .movieContainer:hover ul .overlay {
-    opacity: 1;
-  }
-  
+
   .text {
     color: white;
     font-size: 20px;
@@ -90,4 +87,128 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    
   }
+
+
+
+/**onClick**/
+
+
+
+.movieContainerClicked  ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 00px));
+
+}
+
+.movieContainerClicked > ul > li {
+  border-radius: .5rem;
+  list-style-type:none;
+}
+
+.movieContainerClicked > ul > li > figure {
+  max-height: 500px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  position: relative;
+  padding-bottom: 1%;
+  box-shadow: 0 0 25px #000000;
+}
+
+.movieContainerClicked > ul > li > figure > img {
+  width: 100%;
+}
+
+
+
+.movieContainerClicked > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .1rem;
+  font-size: 1.25rem;
+}
+
+
+.clickedText{
+  display: none;
+}
+
+.synopsis{
+  color: white;
+  padding: .1rem;
+  font-size: 1.25rem;
+}
+
+
+
+
+
+.mainOne{
+
+  max-width: 90%;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  padding-top: 3%;
+}
+
+
+@media (max-width: 900px) {
+  .mainOne{
+
+    max-width: 100%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    padding-top: 3%;
+  }
+}
+
+.ReactModal__Content{
+  height: 40%;
+  margin: 10% ;
+  outline: none;
+  padding: 2%;
+  margin: 20% 20% 0% 20%;
+  display: flex;
+  flex-direction: row;
+    box-shadow: 0rem  0rem  1rem .5rem  rgba(0, 0, 0, .2);   
+  border-radius: 5px;
+}
+
+.backDrop{
+  max-width: 100px;
+  filter: grayscale(1) blur(5px);
+  opacity: .5;
+}
+
+.synopsis{
+  color:rgb(255, 255, 255);
+  max-height: 50%;
+  overflow: scroll;
+}
+
+.sideInfo{
+  margin-left: 3%
+}
+
+.backDrop {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .15);
+  
+  backdrop-filter: blur(9px);
+}
+.posterImageInside{
+  height: 100%;
+  border-radius: 5px;
+  max-width: 100%;
+}
+.synopsis::-webkit-scrollbar {
+  display: none;
+}

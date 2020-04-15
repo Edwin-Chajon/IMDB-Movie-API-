@@ -1,0 +1,126 @@
+.headerDiv{
+    width:100%;
+    display:flex;
+    align-items:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+   
+}
+
+.headTitle{
+    /*background-color:white;*/
+    width: 45%;
+    height: 0%;
+    margin: 5% 0% 0% 10%;
+
+}
+
+.headLink{
+   color: white;
+    
+}
+.containment {
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+}
+.linkDiv{
+    width: 100%;
+    color: rgb(27, 127, 129);
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-right: 4%;
+    padding-top: 2%;
+    flex-wrap: wrap;
+    background-color: green,
+}
+.containment{
+    width:100%;
+    display:flex;
+    align-items:center;
+    
+}
+
+.w{
+    background-color: rgb(223, 173, 114),
+    rgb(27, 127, 129), 	rgb(233, 77, 77),
+    rgb(27, 32, 47), rgb(255, 35, 96),
+    rgb(88, 255, 212)
+  
+}
+
+
+
+.linkDiv a:hover {
+	color: rgb(255, 35, 96);
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+
+    list-style: none;
+  }
+
+
+
+@media (max-width: 800px) {
+	.linkDiv {
+		flex-direction: column;
+        justify-content: space-between;
+        text-align:center;
+	}
+    .containment{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .headTitle{
+        /*background-color:white;*/
+        width: 80%;
+        height: 0%;
+    
+    }
+    .singular{
+        padding:3%;
+    }
+    .linkDiv {
+        margin-top: 5px;
+    
+    }
+    .logo a,
+    .linkDiv a {
+        padding: 10px 15px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+    }
+    
+    .linkDiv a {
+        color: white;
+        font-size: .99em;
+    }
+}
+
+
+
+.headTitle {
+    stroke-dasharray: 1100;
+    stroke-dashoffset: 1000;
+    animation: dash 1s  forwards ;
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1130;
+    }
+    to {
+      stroke-dashoffset: 00;
+    }
+  }
