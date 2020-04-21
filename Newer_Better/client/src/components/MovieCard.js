@@ -46,14 +46,14 @@ const MovieCard = props => {
        shouldCloseOnOverlayClick={true}
        className = {"ReactModal__Content"}
        ariaHideApp={false}
-      style={{overlay: {backgroundColor: "none"},content:{borderRadius: "7px",border: `3px solid ${/*data.muted*/data.l}`,background: `${data.vibrant}`}}}
+       style={{overlay: {backgroundColor: "none"},content:{borderRadius: "7px",border: `3px solid ${/*data.muted*/data.l}`,background: `${data.vibrant}`}}}
        shouldFocusAfterRender={false}
        > 
  
           {/* <img className= 'backDrop' src = {props.backdrop}/>*/}
           <img src = {props.image} className= 'posterImageInside' alt='Movie Poster'/>
           <div className= 'sideInfo'>
-            <h1 className = 'synopsis' >{props.movie}</h1>
+            <h1 className = 'title' >{props.movie}</h1>
             <div className = 'synopsis'>{props.synopsis}</div> 
           </div>
       </ReactModal> 
